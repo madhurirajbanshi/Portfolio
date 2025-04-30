@@ -40,7 +40,7 @@ const Projects = () => {
       description: "Tool analyzing government communications",
       link: "https://github.com/madhurirajbanshi/GovLens",
       image: "/GovLens.png",
-      tags: ["ai", "fullstack"],
+      tags: ["fullstack"],
     },
     {
       title: "Tic-Tac-Toe",
@@ -97,7 +97,6 @@ const Projects = () => {
           </p>
         </motion.div>
 
-        {/* Filter Tabs */}
         <div className="flex flex-wrap justify-center gap-2 mb-10">
           {categories.map((category, index) => (
             <motion.button
@@ -119,7 +118,6 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* Project Grid */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           initial={{ opacity: 0 }}
@@ -136,11 +134,9 @@ const Projects = () => {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              {/* Gradient Border */}
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 p-0.5 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
               <div className="relative z-10 bg-gray-900 rounded-2xl overflow-hidden h-full">
-                {/* Project Image */}
                 <div className="h-48 overflow-hidden">
                   <img
                     src={project.image}
@@ -149,7 +145,6 @@ const Projects = () => {
                   />
                 </div>
 
-                {/* Project Info */}
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-white mb-2">
                     {project.title}
@@ -158,7 +153,6 @@ const Projects = () => {
                     {project.description}
                   </p>
 
-                  {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag, i) => (
                       <span

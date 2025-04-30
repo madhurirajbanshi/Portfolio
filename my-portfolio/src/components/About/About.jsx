@@ -51,7 +51,7 @@ const About = () => {
               ></motion.div>
 
               <img
-                src="https://img.freepik.com/premium-photo/portrait-indian-businesswoman-white-background-holding-laptop_665346-22333.jpg?w=2000"
+                src="/Madhuri.png"
                 alt="Madhuri Rajbanshi"
                 className="w-full h-full object-cover rounded-lg shadow-lg"
               />

@@ -1,6 +1,14 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
+import { FileText } from "lucide-react";
 
 const Home = () => {
+  const [cvError, setCvError] = useState(false);
+
+  const handleCVDownload = (e) => {
+    // You can add logic to setCvError(true) if needed
+  };
+
   return (
     <div className="text-white min-h-screen flex flex-col md:flex-row w-full justify-center items-center p-8 md:p-20 gap-10 -mt-10">
       <motion.div
@@ -48,17 +56,41 @@ const Home = () => {
           enhances user experience and drives business success.
         </motion.p>
 
-        <motion.a
-          href="#projects"
-          className="mt-8 inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 px-8 rounded-lg font-medium shadow-lg hover:shadow-xl"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+        <motion.div
+          className="mt-8 flex flex-wrap items-center gap-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          View My Work
-        </motion.a>
+          <motion.a
+            href="#projects"
+            className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 px-6 rounded-lg font-medium shadow-lg hover:shadow-xl"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            View My Work
+          </motion.a>
+
+          <motion.a
+            href="/Madhuri.pdf"
+            download="Madhuri_Rajbanshi_CV.pdf"
+            className={`py-3 px-6 text-base ${
+              cvError
+                ? "bg-red-900/20 border-red-500/30"
+                : "bg-gray-800 border-purple-500/30"
+            } border rounded-lg font-medium flex items-center gap-2 hover:bg-gray-700 transition-colors`}
+            whileHover={{
+              scale: 1.05,
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
+            }}
+            whileTap={{ scale: 0.95 }}
+            onClick={handleCVDownload}
+            onAuxClick={handleCVDownload}
+          >
+            <FileText size={18} className={cvError ? "text-red-400" : ""} />
+            {cvError ? "CV Unavailable" : "Download CV"}
+          </motion.a>
+        </motion.div>
       </motion.div>
 
       <motion.div
@@ -106,7 +138,7 @@ const Home = () => {
 
           <div className="relative rounded-full p-1 bg-gradient-to-r from-blue-500 to-purple-600">
             <img
-              src="https://img.freepik.com/premium-photo/portrait-indian-businesswoman-white-background-holding-laptop_665346-22333.jpg?w=2000"
+              src="/Madhuri.png"
               alt="Madhuri Rajbanshi"
               className="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover"
             />
