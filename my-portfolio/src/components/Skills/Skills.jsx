@@ -16,7 +16,7 @@ import {
   SiDotnet,
   SiPostman,
   SiMysql,
-  // SiVisualstudiocode,
+  SiSupabase,
 } from "react-icons/si";
 
 const Skills = () => {
@@ -58,8 +58,8 @@ const Skills = () => {
       color: "from-purple-500 to-pink-500",
       skills: [
         {
-          icon: <SiDotnet className="text-purple-600 text-2xl" />,
-          name: ".NET Core",
+          icon: <SiDotnet className="text-blue-500 text-2xl" />,
+          name: "ASP.NET Core",
         },
         {
           icon: <FaNodeJs className="text-green-500 text-2xl" />,
@@ -96,13 +96,13 @@ const Skills = () => {
           icon: <SiPostman className="text-orange-500 text-2xl" />,
           name: "Postman",
         },
-        // {
-        //   icon: <SiVisualstudiocode className="text-blue-500 text-2xl" />,
-        //   name: "VS Code",
-        // },
         {
           icon: <FaCode className="text-indigo-500 text-2xl" />,
           name: "Visual Studio",
+        },
+        {
+          icon: <SiSupabase className="text-green-600 text-2xl" />,
+          name: "Supabase",
         },
       ],
     },
@@ -169,7 +169,6 @@ const Skills = () => {
           </div>
         </div>
 
-        {/* Skills Grid */}
         <motion.div
           className="bg-gray-900/70 backdrop-blur-lg rounded-3xl shadow-2xl border border-gray-800/50 p-8 md:p-12 overflow-hidden"
           initial={{ opacity: 0, y: 30 }}

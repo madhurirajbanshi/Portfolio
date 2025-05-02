@@ -5,6 +5,7 @@ import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
 import Projects from "./components/Projects/Projects";
 import ContactMe from "./components/Contact/ContactMe";
+import Footer from "./components/Footer/Footer";
 const App = () => {
   return (
     <div className="bg-[#171d32] min-h-screen w-full overflow-hidden">
@@ -14,6 +15,7 @@ const App = () => {
       <Skills />
       <Projects />
       <ContactMe />
+      <Footer />
     </div>
   );
 };

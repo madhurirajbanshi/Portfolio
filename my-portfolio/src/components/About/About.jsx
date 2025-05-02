@@ -13,14 +13,12 @@ const About = () => {
         transition={{ duration: 0.8 }}
       >
         <div className="flex flex-col md:flex-row">
-          {/* Left Side: Image */}
           <motion.div
             className="w-full md:w-2/5 relative"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            {/* Background gradient */}
             <motion.div
               className="absolute -z-10 left-0 top-0 w-full h-full bg-gradient-to-br from-blue-500/20 to-purple-500/20"
               animate={{
@@ -58,7 +56,6 @@ const About = () => {
             </div>
           </motion.div>
 
-          {/* Right Side: About Text */}
           <motion.div
             className="w-full md:w-3/5 p-6 text-white"
             initial={{ opacity: 0, x: 30 }}
@@ -109,19 +106,9 @@ const About = () => {
               With extensive experience in React, .NET, and Node.js, I thrive on
               turning complex problems into simple, beautiful solutions. My
               approach combines clean code principles with user-centered design
-              to create applications that provide exceptional experiences.
-            </motion.p>
-
-            <motion.p
-              className="mt-3 text-base md:text-lg leading-relaxed text-gray-300"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.5 }}
-            >
-              I'm constantly exploring emerging technologies and best practices,
-              ensuring my skills remain at the cutting edge. When I'm not
-              coding, you'll find me contributing to open-source projects and
-              mentoring aspiring developers in my community.
+              to create applications that provide exceptional experiences. I'm
+              constantly exploring emerging technologies and best practices,
+              ensuring my skills remain at the cutting edge.
             </motion.p>
 
             <motion.div

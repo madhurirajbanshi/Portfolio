@@ -1,186 +1,100 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaLink, FaChevronRight } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 const Projects = () => {
-  const [activeFilter, setActiveFilter] = useState("all");
-  const [hoveredIndex, setHoveredIndex] = useState(null);
-
   const projectList = [
     {
       title: "Page Voyage",
-      description: "Digital book discovery platform",
+      description:
+        "Digital book discovery platform with personalized recommendations and social reading features",
       link: "https://github.com/madhurirajbanshi/Page-Voyage",
       image: "/PageVoyage.png",
-      tags: ["fullstack", "react"],
     },
     {
       title: "Red Cross Blood Management System",
-      description: "Tracking and management system for blood donations",
+      description:
+        "Comprehensive tracking and management system for blood donations and inventory",
       link: "https://github.com/madhurirajbanshi/RedCross_System",
       image: "/RedCross.png",
-      tags: ["fullstack", "react"],
-    },
-    {
-      title: "Know Your Algo",
-      description: "Algorithm visualization and education tool",
-      link: "https://github.com/bpcancode/know-ur-algo",
-      image: "/Know.png",
-      tags: ["frontend", "education"],
-    },
-    {
-      title: "Todo List App",
-      description: "Simple yet effective task management application",
-      link: "https://github.com/madhurirajbanshi/Todo-List",
-      image: "/TodoList.png",
-      tags: ["frontend", "react"],
     },
     {
       title: "GovLens - Government Sentiment Analyzer",
-      description: "Tool analyzing government communications",
+      description:
+        "Advanced tool for analyzing sentiment and trends in government communications",
       link: "https://github.com/madhurirajbanshi/GovLens",
       image: "/GovLens.png",
-      tags: ["fullstack"],
-    },
-    {
-      title: "Tic-Tac-Toe",
-      description: "Interactive game with unbeatable AI opponent",
-      link: "https://github.com/madhurirajbanshi/Tic-Tac-Toe",
-      image: "/Tic-Tac-Toe.png",
-      tags: ["game", "frontend"],
     },
   ];
-
-  const categories = [
-    { name: "all", label: "All Projects" },
-    { name: "frontend", label: "Frontend" },
-    { name: "fullstack", label: "Full Stack" },
-    { name: "game", label: "Games" },
-  ];
-
-  const filteredProjects =
-    activeFilter === "all"
-      ? projectList
-      : projectList.filter((project) => project.tags.includes(activeFilter));
 
   return (
     <div
-      className="min-h-screen flex flex-col items-center justify-start p-8 md:p-16 py-24"
+      className="min-h-screen mt-10 flex flex-col items-center justify-start p-5 md:p-16 py-24"
       id="projects"
+      style={{ background: "#0B101B" }}
     >
       <motion.div
         className="w-full max-w-7xl"
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.6 }}
       >
         <motion.div
           className="mb-16 text-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.6 }}
         >
-          <h2 className="text-5xl font-bold mb-4 inline-block relative">
+          <h2 className="text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
               My Projects
             </span>
-            <motion.span
-              className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500"
-              initial={{ width: "0%" }}
-              animate={{ width: "100%" }}
-              transition={{ duration: 1, delay: 0.5 }}
-            ></motion.span>
           </h2>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            Explore my portfolio of projects spanning from web applications to
-            algorithm visualizations
+            Explore my portfolio of innovative projects spanning from web
+            applications to algorithm visualizations
           </p>
         </motion.div>
 
-        <div className="flex flex-wrap justify-center gap-2 mb-10">
-          {categories.map((category, index) => (
-            <motion.button
-              key={category.name}
-              className={`px-4 py-2 rounded-full font-medium text-sm transition-all ${
-                activeFilter === category.name
-                  ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white"
-                  : "bg-gray-800 text-gray-300 hover:bg-gray-700"
-              }`}
-              onClick={() => setActiveFilter(category.name)}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.1 * index }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {category.label}
-            </motion.button>
-          ))}
-        </div>
-
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
-          {filteredProjects.map((project, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projectList.map((project, index) => (
             <motion.div
               key={index}
-              className="relative rounded-2xl overflow-hidden shadow-lg group"
-              initial={{ opacity: 0, y: 30 }}
+              className="overflow-hidden rounded-xl flex flex-col h-full"
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 * index }}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              style={{
+                background:
+                  "linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.8) 100%)",
+                boxShadow:
+                  "0 4px 20px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(90, 100, 190, 0.2)",
+              }}
             >
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 p-0.5 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative h-48 w-full overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                />
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute top-2 right-2 bg-black bg-opacity-60 hover:bg-opacity-80 text-white p-1.5 rounded-full transition"
+                >
+                  <FaGithub className="w-4 h-4" />
+                </a>
+              </div>
 
-              <div className="relative z-10 bg-gray-900 rounded-2xl overflow-hidden h-full">
-                <div className="h-48 overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                </div>
-
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-400 mb-4 text-sm">
-                    {project.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag, i) => (
-                      <span
-                        key={i}
-                        className="px-2 py-1 bg-gray-800 text-gray-300 rounded-md text-xs font-medium"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Action Buttons */}
-                  <div className="flex items-center justify-between">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
-                    >
-                      <FaGithub className="text-lg" />
-                      <span className="text-sm font-medium">View Code</span>
-                    </a>
-                  </div>
-                </div>
+              <div className="p-5 bg-gradient-to-b from-blue-900/20 to-purple-900/10 flex flex-col flex-grow">
+                <h3 className="text-lg font-bold text-blue-400 mb-1">
+                  {project.title}
+                </h3>
+                <p className="text-gray-300 text-sm">{project.description}</p>
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </motion.div>
     </div>
   );

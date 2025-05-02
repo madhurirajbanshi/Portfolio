@@ -8,7 +8,7 @@ import {
   FaMapMarkerAlt,
   FaPaperPlane,
 } from "react-icons/fa";
-import emailjs from "@emailjs/browser"; // Import EmailJS
+import emailjs from "@emailjs/browser";
 
 const ContactMe = () => {
   const [formData, setFormData] = useState({
@@ -36,7 +36,6 @@ const ContactMe = () => {
       setErrorMessage("Please enter your email");
       return false;
     }
-    // Basic email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       setErrorMessage("Please enter a valid email address");
@@ -57,8 +56,6 @@ const ContactMe = () => {
 
     setIsSubmitting(true);
 
-    // EmailJS configuration
-    // Replace these values with your actual EmailJS credentials
     const serviceId = "service_9adg3ch";
     const templateId = "template_8g5bvay";
     const publicKey = "UXjK4LFqBoGCEkDc8";
@@ -68,7 +65,7 @@ const ContactMe = () => {
       from_email: formData.email,
       subject: formData.subject || "Portfolio Contact Form",
       message: formData.message,
-      to_name: "Madhuri", // Your name
+      to_name: "Madhuri",
     };
 
     emailjs
@@ -90,7 +87,6 @@ const ContactMe = () => {
       })
       .finally(() => {
         setIsSubmitting(false);
-        // Reset status after 5 seconds
         setTimeout(() => {
           setSubmitStatus(null);
           setErrorMessage("");
@@ -142,7 +138,7 @@ const ContactMe = () => {
 
   return (
     <div
-      className="min-h-screen flex flex-col items-center justify-start p-8 md:p-16 py-24"
+      className="min-h-screen flex flex-col items-center justify-start p-8 md:p-16 py-24 -mt-6"
       id="contact"
     >
       <motion.div
