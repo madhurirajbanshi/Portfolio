@@ -193,7 +193,7 @@ const ContactMe = () => {
                   value={formData.name}
                   onChange={handleChange}
                   className="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
-                  placeholder="John Doe"
+                  placeholder=""
                 />
               </div>
 
@@ -211,7 +211,7 @@ const ContactMe = () => {
                   value={formData.email}
                   onChange={handleChange}
                   className="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
-                  placeholder="john@example.com"
+                  placeholder=""
                 />
               </div>
 
@@ -339,7 +339,7 @@ const ContactMe = () => {
                   </div>
                   <div>
                     <p className="text-gray-400 text-sm mb-1">Location</p>
-                    <p className="text-white">Kathmandu, Nepal</p>
+                    <p className="text-white">Kachankawal,Nepal</p>
                   </div>
                 </li>
               </ul>
