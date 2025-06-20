@@ -89,7 +89,7 @@ const Home = () => {
         className="md:w-1/2 flex justify-center mt-10 md:mt-0"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
+        transition={{ duration: 0.8 }}
       >
         <div className="relative">
           <div className="relative rounded-full p-0.5 bg-gradient-to-r from-blue-500/70 to-purple-600/70 overflow-hidden">
