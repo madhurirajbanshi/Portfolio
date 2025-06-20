@@ -28,7 +28,7 @@ const Home = () => {
             className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent ml-2"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            transition={{ duration: 0.8 }}
           >
             I'm
           </motion.span>
@@ -36,7 +36,7 @@ const Home = () => {
             className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent ml-2"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 0.8}}
           >
             Madhuri Rajbanshi
           </motion.span>
@@ -46,7 +46,7 @@ const Home = () => {
           className="mt-6 text-lg md:text-xl leading-relaxed text-gray-300"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 0.5 }}
         >
           I'm a passionate full-stack developer specializing in building
           responsive and robust web applications. Committed to continuous
@@ -58,7 +58,7 @@ const Home = () => {
           className="mt-8 flex flex-wrap items-center gap-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
+          transition={{ duration: 0.5 }}
         >
           <a
             href="#projects"
