@@ -44,9 +44,10 @@ const Skills = () => {
           name: "TailwindCSS",
         },
         {
-          icon: <FaBootstrap className="text-purple-600 text-2xl" />,
-          name: "Bootstrap",
+          icon: <FaReact className="text-blue-300 text-2xl" />,
+          name: "React Native",
         },
+
         {
           icon: <FaJsSquare className="text-yellow-400 text-2xl" />,
           name: "JavaScript (ES6+)",

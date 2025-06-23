@@ -311,7 +311,6 @@ const ContactMe = () => {
             custom={2}
             className="flex flex-col gap-8"
           >
-            {/* Contact Details */}
             <div className="bg-gray-900/70 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-gray-800">
               <h3 className="text-2xl font-bold mb-6 text-white">
                 Contact Information
