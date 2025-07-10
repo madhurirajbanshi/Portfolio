@@ -17,6 +17,7 @@ import {
   SiPostman,
   SiMysql,
   SiSupabase,
+  SiGraphql,
 } from "react-icons/si";
 
 const Skills = () => {
@@ -69,6 +70,10 @@ const Skills = () => {
         {
           icon: <span className="text-indigo-400 text-xl">🔗</span>,
           name: "RESTful APIs",
+        },
+        {
+          icon: <SiGraphql className="text-pink-500 text-2xl" />,
+          name: "GraphQL",
         },
         {
           icon: <span className="text-green-400 text-xl">🔐</span>,
