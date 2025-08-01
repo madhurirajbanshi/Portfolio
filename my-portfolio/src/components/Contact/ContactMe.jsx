@@ -338,7 +338,7 @@ const ContactMe = () => {
                   </div>
                   <div>
                     <p className="text-gray-400 text-sm mb-1">Location</p>
-                    <p className="text-white">Kachankawal,Jhapa</p>
+                    <p className="text-white">Kathmandu,Nepal</p>
                   </div>
                 </li>
               </ul>
