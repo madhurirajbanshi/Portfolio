@@ -36,7 +36,7 @@ const Home = () => {
             className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent ml-2"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8}}
+            transition={{ duration: 0.8 }}
           >
             Madhuri Rajbanshi
           </motion.span>
@@ -69,7 +69,7 @@ const Home = () => {
 
           <a
             href="/Madhuri.pdf"
-            download="Madhuri_Rajbanshi_CV.pdf"
+            download="Madhuri.pdf"
             className={`py-3 px-6 text-base ${
               cvError
                 ? "bg-red-900/20 border-red-500/30"
